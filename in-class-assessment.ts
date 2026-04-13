@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import express, { Request, Response, NextFunction } from "express";
 import { MongoClient, Collection, ObjectId } from "mongodb";
 import dotenv from "dotenv";
 
@@ -13,6 +13,10 @@ interface Movie {
 }
 
 const app = express();
+app.use((req: Request, res: Response, next: NextFunction) => {
+    console.log(`${req.method} ${req.url}`);
+    next();
+});
 const port = 5000;
 
 app.use(express.json());
