@@ -25,3 +25,6 @@ Complete all coding tasks in [in-class-assessment.ts](in-class-assessment.ts).
 **Important**: Do not create any additional files other than your .env file. All your work should be done in the existing `in-class-assessment.ts` file.
 
 Good luck! 🚀
+## Contribution
+
+- Shakhboz: Backend API, MongoDB connection, routes
