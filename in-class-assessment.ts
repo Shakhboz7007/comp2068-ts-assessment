@@ -146,3 +146,8 @@ connectToDatabase()
         message: "API is running successfully"
     });
 });
+app.get("/", (req: Request, res: Response) => {
+    res.status(200).json({
+        message: "Welcome to the Movie API"
+    });
+});
