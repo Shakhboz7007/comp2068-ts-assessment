@@ -1,0 +1,32 @@
+{
+  "name": "movie-api-assessment",
+  "version": "1.0.0",
+  "description": "In-Class Assessment: Movie API with Express, TypeScript, and MongoDB",
+  "type": "module",
+  "main": "dist/in-class-assessment.js",
+  "scripts": {
+    "build": "rimraf dist && npx tsc",
+    "prestart": "npm run build",
+    "start": "node dist/in-class-assessment.js",
+    "predev": "npm run build",
+    "dev": "concurrently \"npx tsc -w\" \"nodemon dist/in-class-assessment.js\"",
+    "solution": "npx tsc && node dist/in-class-assessment-SOLUTION.js"
+  },
+  "keywords": ["express", "typescript", "mongodb", "rest-api"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.9",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongodb": "^7.0.0",
+    "rimraf": "^6.1.2",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^4.0.6",
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.11"
+  }
+}
