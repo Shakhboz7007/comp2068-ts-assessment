@@ -93,7 +93,10 @@ app.post("/api/movies", async (req: Request, res: Response) => {
       insertedId: result.insertedId,
     });
   } catch (error) {
-    res.status(500).json({ message: "Error creating movie" });
+    res.status(500).json({
+    message: "Error fetching movies",
+    timestamp: new Date()
+});
   }
 });
 
